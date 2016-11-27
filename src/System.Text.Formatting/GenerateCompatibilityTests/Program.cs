@@ -16,7 +16,7 @@ class Program
 
     private static void GenerateTimeSpanTests()
     {
-        var file = new StreamWriter(@"..\..\..\tests\TimeSpanFormattingTests.Generated.cs");
+        var file = new StreamWriter(@"..\..\..\..\..\tests\System.Text.Formatting.Tests\TimeSpanFormattingTests.Generated.cs");
         var writer = new CodeWriter(file);
 
         GenerateFileHeader(writer);
@@ -31,7 +31,7 @@ class Program
 
     private static void GenerateNumericTypesTests()
     {
-        var file = new StreamWriter(@"..\..\..\tests\NumberFormattingTests.Generated.cs");
+        var file = new StreamWriter(@"..\..\..\..\..\tests\System.Text.Formatting.Tests\NumberFormattingTests.Generated.cs");
         var writer = new CodeWriter(file);
 
         GenerateFileHeader(writer);
@@ -64,7 +64,7 @@ class Program
         //GenerateTest(writer, typeName, 'g', maxPrecision);
         GenerateTest(writer, typeName, 'N', maxPrecision);
         //GenerateTest(writer, typeName, 'P', maxPrecision);
-        //GenerateTest(writer, typeName, 'R', maxPrecision);
+        GenerateTest(writer, typeName, 'R', maxPrecision);
         GenerateTest(writer, typeName, 'X', maxPrecision);
         GenerateTest(writer, typeName, 'x', maxPrecision);
     }
